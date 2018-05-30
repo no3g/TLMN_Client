@@ -21,60 +21,13 @@ namespace Client
             InitializeComponent();
         }
 
-        Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            try {
-                int port = 8080;
-                
-                IPEndPoint ep = new IPEndPoint(IPAddress.Parse(textBox3.Text), port);
-                ClientSocket.Connect(ep);
-
-            }
- 
-            catch (Exception ex) {
-                MessageBox.Show("Error: " + ex);
-            }
-            Thread t = new Thread(() =>
-            {   
-                //while (true)
-                {
-                    Thread UserThread = new Thread(User);
-                    UserThread.Start(ClientSocket);
-                }
-            });
-            t.Start();
-            
+            Form2 f2 = new Form2(tbIP.Text);
+            this.Hide();
+            f2.Show();
         }
 
-        public void User(object Client)
-        {
-            while (true)
-            {
-                Socket ClientSocket = Client as Socket;
-                byte[] rev = new byte[4096];
-                int size = ClientSocket.Receive(rev);
-                //add(Encoding.ASCII.GetString(rev, 0, size));
-                //rev = new byte[1024];
-                //size = ClientSocket.Receive(rev);
-                add(Encoding.ASCII.GetString(rev, 0, size));
-            }
-        }
-
-        void add(string s)
-        {
-            textBox2.Invoke(new MethodInvoker(delegate()
-            {
-                textBox2.Text=s;
-                textBox2.AppendText("\r\n");
-            }));
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string msg = textBox1.Text;
-            ClientSocket.Send(Encoding.ASCII.GetBytes(msg), 0, msg.Length, SocketFlags.None);
-        }
+        
     }
 }
