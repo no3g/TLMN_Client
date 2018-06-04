@@ -42,6 +42,7 @@
             this.lb_Ready2 = new System.Windows.Forms.Label();
             this.lb_Ready1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_Rank = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bt_Sort = new System.Windows.Forms.Button();
             this.lb_BoLuot1 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.lb_Wait2 = new System.Windows.Forms.Label();
             this.lb_Wait3 = new System.Windows.Forms.Label();
             this.lb_BoLuot4 = new System.Windows.Forms.Label();
-            this.lb_Rank = new System.Windows.Forms.Label();
             this.lb_Bet = new System.Windows.Forms.Label();
             this.lb_Money = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -195,6 +195,18 @@
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lb_Rank
+            // 
+            this.lb_Rank.AutoSize = true;
+            this.lb_Rank.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Rank.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lb_Rank.Location = new System.Drawing.Point(293, 62);
+            this.lb_Rank.Name = "lb_Rank";
+            this.lb_Rank.Size = new System.Drawing.Size(60, 31);
+            this.lb_Rank.TabIndex = 0;
+            this.lb_Rank.Text = "hihi";
+            this.lb_Rank.Visible = false;
+            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(275, 449);
@@ -298,18 +310,6 @@
             this.lb_BoLuot4.Text = "Bo Luot";
             this.lb_BoLuot4.Visible = false;
             // 
-            // lb_Rank
-            // 
-            this.lb_Rank.AutoSize = true;
-            this.lb_Rank.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Rank.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lb_Rank.Location = new System.Drawing.Point(293, 62);
-            this.lb_Rank.Name = "lb_Rank";
-            this.lb_Rank.Size = new System.Drawing.Size(60, 31);
-            this.lb_Rank.TabIndex = 0;
-            this.lb_Rank.Text = "hihi";
-            this.lb_Rank.Visible = false;
-            // 
             // lb_Bet
             // 
             this.lb_Bet.AutoSize = true;
@@ -337,6 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1184, 611);
             this.Controls.Add(this.lb_Money);
             this.Controls.Add(this.lb_Bet);

@@ -58,6 +58,8 @@ namespace Client
             lb_Wait3.BackColor = System.Drawing.Color.Transparent;
             lb_Bet.BackColor = System.Drawing.Color.Transparent;
             lb_Money.BackColor = System.Drawing.Color.Transparent;
+            panel1.BackColor = System.Drawing.Color.Transparent;
+            panel2.BackColor = System.Drawing.Color.Transparent;
             lb_Bet.Text = "Tien cuoc: " + bet;
             lb_Money.Text = "Tien: " + money.ToString();
             Thread t = new Thread(() =>
