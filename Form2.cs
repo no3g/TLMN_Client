@@ -76,8 +76,7 @@ namespace Client
         {
             while (true)
             {
-                try
-                {
+                
                     Socket ClientSocket = Client as Socket;
                     byte[] rev = new byte[4096];
                     int size = ClientSocket.Receive(rev);
@@ -119,13 +118,9 @@ namespace Client
                         bt_Danh.Enabled = false;
                         bt_BoLuot.Enabled = false;
                         bt_Show(bt_Ready);
+                        ksort = false;
                     }
                     else draw();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
             }
         }
         public void ShowRank(string s)
